@@ -1,12 +1,31 @@
 import {FormWrapper} from "./FormWrapper.tsx";
 
-export function AccountForm() {
+type AccountData = {
+    email: string
+    password: string
+}
+
+type AccountFormProps = AccountData & {
+    updateFields: (fields: Partial<AccountData>) => void
+}
+export function AccountForm({ email, password, updateFields }: AccountFormProps) {
     return (
         <FormWrapper title={"Account Creation"}>
             <label>Email</label>
-            <input autoFocus required type="email" />
+            <input
+                autoFocus
+                required
+                type="email"
+                value={email}
+                onChange={e => updateFields({ email: e.target.value })}
+            />
             <label>Password</label>
-            <input required type="text" />
+            <input
+                required
+                type="text"
+                value={password}
+                onChange={e => updateFields({ password: e.target.value })}
+            />
         </FormWrapper>
     )
 }
