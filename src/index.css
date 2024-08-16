@@ -1,0 +1,36 @@
+.App {
+    position: relative;
+    background: white;
+    border: 1px solid black;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    font-family: Arial, sans-serif;
+    max-width: max-content;
+}
+
+.form-position {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.button-block {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.title {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.children {
+    display: grid;
+    gap: 1rem 0.5rem;
+    justify-content: flex-start;
+    grid-template-columns: auto minmax(auto, 400px);
+}
